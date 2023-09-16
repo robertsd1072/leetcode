@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+  <!-- The main program -->
+  <script type="text/javascript" src="IndexController.js"></script>
+
+  <head>
+    <title>LeetCode Test Case Generator</title>
+  </head>
+
+  <div style="text-align: center;">
+    <br>
+    <img src="LeetCode_Logo_black_with_text.png" alt="LeetCode Logo" style="height: 75; width: 300;">
+    <h1>Test Case Generator</h1>
+    <br>
+    <div id="outer">
+      <div class="inner"><button class="my_btn_style" onClick='setArray()'>Array</button></div>
+      <div class="inner"><button class="my_btn_style" onClick='setString()'>String</button></div>
+      <div class="inner"><button class="my_btn_style" onClick='setMatrix()'>Matrix</button></div>
+      <div class="inner"><button class="my_btn_style" onClick='setCommands()'>Special Commands</button></div>
+    </div>
+    <br>
+
+    <div id="init_cmd_div" style="display: none;">
+      <h3>Enter initializing command:</h3>
+      <p>For example: "LRUCache:[0-10]" where "LRUCache" is the command and "0-10" is the inclusive range of the number associated with the command.</p>
+      <p>It's also possible to do something like: "LRUCache:[a-z]" and "LRUCache:[hi,hello,bye]" (for distinct values).</p>
+      <input type="text" id="init_cmd_text" name="init_cmd_text">
+    </div>
+
+    <div id="other_cmds_div" style="display: none;">
+      <h3>Enter other commands:</h3>
+      <p>For example: "get:[0-10]" where "get" is the command and "0-10" is the inclusive range of the number associated with the command.</p>
+      <p>It's also possible to do something like: "LRUCache:[a-z]" and "LRUCache:[hi,hello,bye]" (for distinct values).</p>
+      <p>Separate with each command with a space.</p>
+      <input type="text" id="other_cmds_text" name="other_cmds_text" style="width: 50%;">
+    </div>
+
+    <div id="length_div" style="display: none;">
+      <h3>Enter length:</h3>
+      <input type="text" id="length_text" name="length_text">
+    </div>
+
+    <div id="length_col_div" style="display: none;">
+      <h3>Enter number of columns:</h3>
+      <input type="text" id="length_text_col" name="length_text_col">
+    </div>
+
+    <div id="length_row_div" style="display: none;">
+      <h3>Enter number of rows:</h3>
+      <input type="text" id="length_text_row" name="length_text_row">
+    </div>
+
+    <div id="range_num_div" style="display: none;">
+      <h3>Enter range of numbers:</h3>
+      <div id="outer">
+        <div class="inner">
+          <h4>From</h4>
+          <h4>(including)</h4>
+          <input type="text" id="from_text" name="from_text">
+        </div>
+        <div class="inner">
+          <h4>To</h4>
+          <h4>(including)</h4>
+          <input type="text" id="to_text" name="to_text">
+        </div>
+        <div class="inner">
+          <h4>OR Check the box and specify</h4>
+          <h4>distinct values. Ex: hi,hello,bye</h4>
+          <input type="checkbox" id="distinct" name="distinct"><br><br>
+          <input type="text" id="distinct_text" name="distinct_text">
+        </div>
+      </div>
+    </div>
+
+    <div id="range_char_div" style="display: none;">
+      <h3>Enter range of numbers:</h3>
+      <div id="outer">
+        <div class="inner">
+          <h4>From Letter</h4>
+          <h4>(including)</h4>
+          <input type="text" id="from_text_char" name="from_text_char">
+        </div>
+        <div class="inner">
+          <h4>To Letter</h4>
+          <h4>(including)</h4>
+          <input type="text" id="to_text_char" name="to_text_char">
+        </div>
+        <div class="inner">
+          <h4>Apply same range</h4>
+          <h4>to capital letters</h4>
+          <input type="checkbox" id="caps" name="caps">
+        </div>
+        <div class="inner">
+          <h4>Other characters</h4>
+          <h4>(separate with commas)</h4>
+          <input type="text" id="other_chars" name="other_chars">
+        </div>
+      </div>
+    </div>
+
+    <div id="sort_div" style="display: none;">
+      <h3>Sorted?</h3>
+      <input type="checkbox" id="sorted" name="sorted">
+    </div>
+
+    <br><br>
+
+    <div id="submit_div" style="display: none;">
+      <button class="my_btn_style" onClick="submit()">Submit</button>
+      <h3 id="result" style="word-wrap: break-word;"></h3>
+      <h3 id="other_result" style="word-wrap: break-word;"></h3>
+    </div>
+
+  </div>
+</html>

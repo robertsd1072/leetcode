@@ -1,0 +1,14 @@
+#outer
+{
+  width:100%;
+  text-align: center;
+}
+.inner
+{
+  display: inline-block;
+}
+
+.my_btn_style
+{
+  font-size: 25;
+}
